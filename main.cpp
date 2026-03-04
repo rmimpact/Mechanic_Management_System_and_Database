@@ -8,6 +8,28 @@ void showMenu() {
 }
 
 int main() {
-    showMenu();
+    while(true) {
+        showMenu();
+        int choice;
+        std::cout << "Selection> ";
+        std::cin >> choice;
+        switch(choice) {
+            case 1:
+                std::cout << "Manage Customers Menu\n";
+                break;
+            case 2:
+                std::cout << "Manage Jobs Meneu\n";
+                break;
+            case 3:
+                std::cout << "Manage Inventory Menu\n";
+                break;
+            case 4:
+                std::cout << "Program Closed\n";
+                return 0;
+                break;
+            default:
+                std::cout << "That is not an option, please try again\n";
+        }
+    }
     return 0;
 }
